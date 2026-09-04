@@ -5,6 +5,7 @@ ExaminaMind is an AI-powered examination analytics system designed to analyze hi
 The system extracts text from uploaded question papers, preprocesses the content using Natural Language Processing techniques, and applies TF-IDF vectorization and Logistic Regression to perform topic classification and predictive analysis.
 
 Features
+
 Upload examination question papers
 Supports PDF, DOCX, and TXT files
 OCR fallback for scanned PDF documents
@@ -67,6 +68,8 @@ pytesseract
 Pillow
 
 🛠️ Technologies Used
+
+
 Backend
 Python
 Flask
@@ -92,6 +95,7 @@ ExaminaMind currently supports:
 For scanned PDF documents, the application uses OCR as a fallback.
 
 🔍 How It Works
+
 Upload historical examination question papers.
 ExaminaMind extracts text from the uploaded documents.
 The extracted text is cleaned and preprocessed.
