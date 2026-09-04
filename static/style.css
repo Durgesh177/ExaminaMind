@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    background: #f4f6f9;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #0f172a, #1e3a8a);
+    color: white;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    margin: 8px 0;
+    text-decoration: none;
+    color: #cbd5e1;
+    border-radius: 8px;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Main */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* Top bar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.topbar span {
+    color: gray;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+/*upload box*/
+.upload-box {
+    border: 2px dashed #3b82f6;
+    padding: 50px;
+    text-align: center;
+    border-radius: 12px;
+    color: #3b82f6;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.upload-box:hover {
+    background: #eef2ff;
+}
+
+/* Button */
+button {
+    background: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.status {
+    background: #d1fae5;
+    color: green;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+/* Success Box */
+.success-box {
+    background: #e6f9ec;
+    border: 1px solid #22c55e;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #166534;
+}
+
+/* Progress Bar */
+.progress {
+    background: #e5e7eb;
+    border-radius: 6px;
+    height: 8px;
+    width: 120px;
+    display: inline-block;
+}
+
+.progress-bar {
+    background: #2563eb;
+    height: 8px;
+    border-radius: 6px;
+    width: 0;
+    transition: 0.5s;
+}
+
+/* Table improvements */
+table th {
+    background: #f1f5f9;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 8px;
+    background: #f1f5f9;
+    margin-bottom: 5px;
+    border-radius: 6px;
+}
+.success-box {
+    background: #e6f9ec;
+    border: 1px solid #22c55e;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#loader {
+    color: #2563eb;
+    font-weight: bold;
+}
+/* ===== TABLE STYLING ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f1f5f9;
+}
+
+a {
+    text-decoration: none;
+    color: #2563eb;
+}
+
+a:hover {
+    text-decoration: underline;
+}

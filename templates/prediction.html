@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Prediction Results</h1>
+
+{% if results %}
+
+<div class="success-box">
+    ✅ Prediction Completed Successfully! <br>
+    Model Accuracy: <strong>{{ accuracy }}%</strong>
+</div>
+
+<div class="card">
+    <h3>Top Predicted Topics</h3>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Topic</th>
+            <th>Score</th>
+            <th>Probability</th>
+        </tr>
+
+        {% for topic, score in results %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>
+    {% if loop.index == 1 %}
+        🥇 {{ topic }}
+    {% elif loop.index == 2 %}
+        🥈 {{ topic }}
+    {% elif loop.index == 3 %}
+        🥉 {{ topic }}
+    {% else %}
+        {{ topic }}
+    {% endif %}
+</td>
+            <td>{{ score|round(2) }}</td>
+            <td>
+                <div class="progress">
+                    <!-- No inline CSS here -->
+                    <div class="progress-bar" data-score="{{ score }}"></div>
+                </div>
+                {{ (score * 100)|round(1) }}%
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+{% else %}
+<p>No predictions available. Upload at least 2 different topic files.</p>
+{% endif %}
+
+<!-- JS to set width dynamically -->
+<script>
+document.querySelectorAll('.progress-bar').forEach(bar => {
+    let score = parseFloat(bar.getAttribute('data-score')) || 0;
+    bar.style.width = (score * 100) + "%";
+});
+</script>
+
+{% endblock %}

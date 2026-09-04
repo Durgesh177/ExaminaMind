@@ -1,0 +1,8 @@
+Flask
+nltk
+scikit-learn
+PyMuPDF
+pytesseract
+Pillow
+python-docx
+joblib

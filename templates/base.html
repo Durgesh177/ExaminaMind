@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ExaminaMind</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🧠 ExaminaMind</h2>
+    <a href="/" class="active">Dashboard</a>
+    <a href="/analysis">Analyze Papers</a>
+    <a href="/prediction">Predictions</a>
+    <a href="/visualization">Visualizations</a>
+</div>
+
+<div class="main">
+    <div class="topbar">
+        <h2>Dashboard</h2>
+        <span>Welcome, Admin 👤</span>
+    </div>
+
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

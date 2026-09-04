@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Visualization</h1>
+
+<div class="card">
+    <canvas id="barChart"></canvas>
+</div>
+
+<div class="card">
+    <canvas id="pieChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+let results = {{ results | safe }};
+
+if (results.length === 0) {
+    console.log("No data for visualization");
+}
+
+let labels = results.map(r => r[0]);
+let data = results.map(r => r[1]);
+
+// BAR CHART
+new Chart(document.getElementById("barChart"), {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Importance Score',
+            data: data
+        }]
+    }
+});
+
+// PIE CHART
+new Chart(document.getElementById("pieChart"), {
+    type: 'pie',
+    data: {
+        labels: labels,
+        datasets: [{
+            data: data
+        }]
+    }
+});
+</script>
+
+<canvas id="barChart"></canvas>
+<canvas id="pieChart"></canvas>
+
+{% endblock %}
